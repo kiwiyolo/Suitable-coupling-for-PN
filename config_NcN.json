@@ -1,0 +1,71 @@
+{
+	"data": {
+		"file_path": "./kw_01_data/data_20200101_20230531/try1_china_TVT/A_TVT_0.6selected_IP/a_train/",
+		"window_path":"./kw_01_data/data/china_15-23_0.5s-IP_Imp-sampling/",
+		"filename": "",
+		"data_len": 360,
+		"sequence_length": 18,
+		"input_length": 9,
+		"n_leadtimes": 3,
+		"timestep": 30,
+		"train_verif_split": 0.8,
+		"train_test_split": 0.8,
+		"normalise": false,
+		"missing_value": -9999.9,
+		"shp_file_path": "./kw_01_data/china_boundary/bou1_4p.shp"
+	},
+	"training": {
+		"epochs": 100,
+		"batch_size": 3,
+		"learning rate": 0.002,
+		"adjust_lr": true,
+		"Estart": 0,
+		"Te": 10,
+		"tt": 0,
+		"multFactor": 1,
+		"save_dir": "./kw_03_saved_models"
+	},
+	"verif": {
+		"verif_path": "./kw_01_data/data_20200101_20230531/try1_china_TVT/A_TVT_0.6selected_IP/b_verif/",
+		"fnu": false,
+		"epochs": 200,
+		"batch_size": 4
+	},
+	"eval": {
+		"thr_precs": {
+			"thr_1p": {
+				"china": 0.00,
+				"NE": 0.10,
+				"NC": 0.10,
+				"EC": 0.10,
+				"NW": 0.10,
+				"SW": 0.10,
+				"SM": 0.10
+			},
+			"thr_40p": {
+				"china": 0.00,
+				"NE": 0.37,
+				"NC": 0.27,
+				"EC": 0.40,
+				"NW": 0.26,
+				"SW": 0.31,
+				"SM": 0.40
+			}
+
+		},
+		"test_path": "./kw_01_data/data_20200101_20230531/try1_china_TVT/A_TVT_0.6selected_IP/c_test/",
+		"fig_path": "./kw_05_plot/",
+		"outcome_path": "./kw_04_outcome/"
+	},
+	"model": {
+		"model_path" : "./kw_03_saved_models/",
+		"focus_model_path" : "./kw_03_saved_models/lr_eval_focus network/",
+		"img_height": 640,
+		"img_width": 512,
+		"loss": "mean_squared_error",
+		"optimizer": "adam",
+		"motion_net_core": 4,
+		"save_dir": "./kw_03_saved_models",
+		"metrics": "mean_squared_error"
+	}
+}

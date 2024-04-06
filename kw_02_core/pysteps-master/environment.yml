@@ -1,0 +1,15 @@
+name: pysteps
+channels:
+- conda-forge
+- defaults
+dependencies:
+  - python>=3.7
+  - jsmin
+  - jsonschema
+  - matplotlib
+  - netCDF4
+  - numpy
+  - opencv
+  - pillow
+  - pyproj
+  - scipy

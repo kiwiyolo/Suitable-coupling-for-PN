@@ -1,0 +1,97 @@
+cartopy依赖的库：
+Pillow‑9.1.1‑cp38‑cp38‑win_amd64.whl
+pyproj‑3.3.1‑cp38‑cp38‑win_amd64.whl
+Shapely‑1.8.2‑cp38‑cp38‑win_amd64.whl
+GDAL‑3.4.3‑cp38‑cp38‑win_amd64.whl
+Fiona‑1.8.21‑cp38‑cp38‑win_amd64.whl
+Pillow==9.1.1
+pyproj==3.3.1
+Shapely==1.8.2
+GDAL==3.4.3
+Fiona==1.8.21
+
+pip uninstall Pillow
+pip uninstall pyproj
+pip uninstall Shapely
+pip uninstall GDAL
+pip uninstall Fiona
+
+pip3.10 install Pillow==9.1.1
+pip3.10 install pyproj==3.3.1
+pip3.10 install Shapely==1.8.2
+pip3.10 install GDAL==3.4.3
+pip3.10 install Fiona==1.8.21
+
+
+
+#安装 GDAL 的依赖项： GDAL 本身也有一些依赖项，确保这些依赖项被满足。
+
+   在 Ubuntu/Debian 系统上：
+
+   bash
+   Copy code
+   sudo apt-get install libproj-dev libgeos-dev libxml2 libxml2-dev
+   使用系统包管理器安装 GDAL： 在一些系统上，使用系统包管理器直接安装 GDAL 可能更为简单。
+
+   在 Ubuntu/Debian 系统上：
+   bash
+   Copy code
+   sudo apt-get install gdal-bin libgdal-dev
+   sudo apt-get install python3-gdal
+ 
+
+
+
+
+出现与`x86_64-linux-gnu-gcc`相关的问题通常是因为缺少系统的构建工具或者缺少一些必要的依赖项。在安装`cartopy`时，它可能需要编译一些C代码，并且为此需要合适的编译器和依赖项。
+
+以下是一些可能解决问题的步骤：
+
+1. **安装构建工具和依赖项：** 确保你的系统上安装了构建工具和一些必要的依赖项。具体来说，`x86_64-linux-gnu-gcc` 是 GCC 编译器的一个符号链接，可能是因为你的系统上只安装了 `gcc`，而没有安装 `x86_64-linux-gnu-gcc`。
+
+   对于Debian/Ubuntu系统，你可以运行：
+
+   ```bash
+   sudo apt-get install build-essential
+   ```
+
+   对于Red Hat/CentOS系统，你可以运行：
+
+   ```bash
+   sudo yum groupinstall "Development Tools"
+   ```
+
+2. **安装`proj` 和 `geos` 库：** `cartopy` 依赖于一些地理信息系统的库，如 `proj` 和 `geos`。确保这些库已经安装在你的系统上。你可以运行以下命令安装：
+
+   对于Debian/Ubuntu系统：
+
+   ```bash
+   sudo apt-get install libproj-dev proj-data proj-bin
+   sudo apt-get install libgeos-dev
+   ```
+
+
+   对于Red Hat/CentOS系统：
+
+   ```bash
+   sudo yum install proj proj-devel
+   sudo yum install geos geos-devel
+   ```
+
+3. **升级`pip`和`setuptools`：** 确保你的`pip` 和 `setuptools` 版本是最新的。你可以运行以下命令来升级它们：
+
+   ```bash
+   pip install --upgrade pip setuptools
+   ```
+
+
+
+4. **使用虚拟环境：** 尝试在一个虚拟环境中安装 `cartopy`，以确保你的环境没有受到其他依赖项的干扰。
+
+   ```bash
+   python -m venv myenv
+   source myenv/bin/activate  # 在 Windows 上是 `source myenv\Scripts\activate`
+   pip install cartopy
+   ```
+
+如果你在尝试上述步骤后仍然遇到问题，请提供更具体的错误信息，这将有助于进一步诊断问题。

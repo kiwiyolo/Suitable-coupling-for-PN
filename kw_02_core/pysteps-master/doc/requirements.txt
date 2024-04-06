@@ -1,0 +1,8 @@
+# Additional requirements related to the documentation build only
+sphinx
+sphinxcontrib.bibtex
+sphinx-book-theme
+sphinx_gallery
+scikit-image
+pandas
+git+https://github.com/pySTEPS/pysteps-nwp-importers.git@main#egg=pysteps_nwp_importers

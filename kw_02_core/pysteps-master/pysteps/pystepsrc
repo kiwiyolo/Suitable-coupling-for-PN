@@ -1,0 +1,158 @@
+// pysteps configuration
+{
+    // "silent_import" : whether to suppress the initial pysteps message
+    "silent_import": false,
+    "outputs": {
+        // path_outputs : path where to save results (figures, forecasts, etc)
+        "path_outputs": "./"
+    },
+    "plot": {
+        // "motion_plot" : "streamplot" or "quiver"
+        "motion_plot": "quiver",
+        // "colorscale" :  "BOM-RF3", "pysteps" or "STEPS-BE"
+        "colorscale": "pysteps"
+    },
+    "data_sources": {
+        "bom": {
+            "root_path": "./radar/bom",
+            "path_fmt": "prcp-cscn/2/%Y/%m/%d",
+            "fn_pattern": "2_%Y%m%d_%H%M00.prcp-cscn",
+            "fn_ext": "nc",
+            "importer": "bom_rf3",
+            "timestep": 6,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "kiwi": {
+            "root_path": "./radar/kiwi",
+            "path_fmt": "try_GPM/%Y/%m/%d",
+            "fn_pattern": "3B-HHR-E.MS.MRG.3IMERG.%Y%m%d%H.V06B",
+            "fn_ext": "HDF5",
+            "importer": "mch_hdf5",
+            "timestep": 30,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "fmi": {
+            "root_path": "./radar/fmi/pgm",
+            "path_fmt": "%Y%m%d",
+            "fn_pattern": "%Y%m%d%H%M_fmi.radar.composite.lowest_FIN_SUOMI1",
+            "fn_ext": "pgm.gz",
+            "importer": "fmi_pgm",
+            "timestep": 5,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "fmi_geotiff": {
+            "root_path": "./radar/fmi/geotiff",
+            "path_fmt": "%Y%m%d",
+            "fn_pattern": "%Y%m%d%H%M_FINUTM.tif",
+            "fn_ext": "tif",
+            "importer": "geotiff",
+            "timestep": 5,
+            "importer_kwargs": {}
+        },
+        "mch": {
+            "root_path": "./radar/mch",
+            "path_fmt": "%Y%m%d",
+            "fn_pattern": "AQC%y%j%H%M?_00005.801",
+            "fn_ext": "gif",
+            "importer": "mch_gif",
+            "timestep": 5,
+            "importer_kwargs": {
+                "product": "AQC",
+                "unit": "mm",
+                "accutime": 5
+            }
+        },
+        "mrms": {
+            "root_path": "./mrms",
+            "path_fmt": "%Y/%m/%d",
+            "fn_pattern": "PrecipRate_00.00_%Y%m%d-%H%M%S",
+            "fn_ext": "grib2",
+            "importer": "mrms_grib",
+            "timestep": 2,
+            "importer_kwargs": {}
+        },
+        "opera": {
+            "root_path": "./radar/OPERA",
+            "path_fmt": "%Y%m%d",
+            "fn_pattern": "T_PAAH21_C_EUOC_%Y%m%d%H%M%S",
+            "fn_ext": "hdf",
+            "importer": "opera_hdf5",
+            "timestep": 15,
+            "importer_kwargs": {}
+        },
+        "knmi": {
+            "root_path": "./radar/KNMI",
+            "path_fmt": "%Y/%m",
+            "fn_pattern": "RAD_NL25_RAP_5min_%Y%m%d%H%M",
+            "fn_ext": "h5",
+            "importer": "knmi_hdf5",
+            "timestep": 5,
+            "importer_kwargs": {
+                "accutime": 5,
+                "qty": "ACRR",
+                "pixelsize": 1000.0
+			}
+        },
+		"rmi": {
+            "root_path": "./radar/rmi/radqpe",
+            "path_fmt": "%Y%m%d",
+            "fn_pattern": "%Y%m%d%H%M00.rad.best.comp.rate.qpe",
+            "fn_ext": "hdf",
+            "importer": "odim_hdf5",
+            "timestep": 5,
+            "importer_kwargs": {
+				"accutime": 5.0
+            }
+        },
+        "saf": {
+            "root_path": "./saf",
+            "path_fmt": "%Y%m%d/CRR",
+            "fn_pattern": "S_NWC_CRR_MSG4_Europe-VISIR_%Y%m%dT%H%M00Z",
+            "fn_ext": "nc",
+            "importer": "saf_crri",
+            "timestep": 15,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "bom_nwp": {
+            "root_path": "./nwp/bom",
+            "path_fmt": "%Y/%m/%d",
+            "fn_pattern": "%Y%m%d_%H00_regrid_short",
+            "fn_ext": "nc",
+            "importer": "bom_nwp",
+            "timestep": 10,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "rmi_nwp": {
+            "root_path": "./nwp/rmi",
+            "path_fmt": "%Y/%m/%d",
+            "fn_pattern": "ao13_%Y%m%d%H_native_5min",
+            "fn_ext": "nc",
+            "importer": "rmi_nwp",
+            "timestep": 5,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        },
+        "knmi_nwp": {
+            "root_path": "./nwp/knmi",
+            "path_fmt": "%Y/%m/%d",
+            "fn_pattern": "%Y%m%d_%H00_Pforecast_Harmonie",
+            "fn_ext": "nc",
+            "importer": "knmi_nwp",
+            "timestep": 60,
+            "importer_kwargs": {
+                "gzipped": true
+            }
+        }
+    }
+}
