@@ -10,7 +10,7 @@ Figures
 
 An Overview of the Proposed NcN
 
-.. image:: kw_05_plot/An overview of the proposed NcN.png
+.. image:: kw_05_plot/An_overview_NcN.png
    :alt: An overview of the proposed NcN
    :width: 600px
 
