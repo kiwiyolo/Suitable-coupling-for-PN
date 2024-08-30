@@ -5,21 +5,31 @@ Abstract
 --------
 When attempting to enhance the incorporation of physical principles through coupling methods such as optical flow or others in deep learning, the resulting differences brought by these coupling strategies are often overlooked. Therefore, further verification is required to determine whether an end-to-end approach is indeed optimal for establishing such models. In this study, two classical model structures are employed to explore how different coupling strategies using the optical flow method affect prediction results along with corresponding attribution analysis. Some constructive comments and references will be presented for the next development of precipitation nowcasting models. Additionally, by considering geographical environmental variations across different regions in China, we evaluate the applicability of precipitation prediction models in each region. We propose adopting a strategy that constructs an end-to-end network combined with convolutional and recursive networks to achieve reliable precipitation nowcasting. 
 
-An overview of the proposed NcN
+Figures
+-------
+
+An Overview of the Proposed NcN
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: kw_05_plot/An overview of the proposed NcN.tif
    :alt: An overview of the proposed NcN
    :width: 600px
-Detail structure of CNcN
+
+Detail Structure of CNcN
+~~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: kw_05_plot/CNcN.tif
-   :alt: CNcN
+   :alt: Detail structure of CNcN
    :width: 600px
-Detail structure of RNcN
+
+Detail Structure of RNcN
+~~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: kw_05_plot/RNcN.tif
-   :alt: RNcN
+   :alt: Detail structure of RNcN
    :width: 600px
-The partitioned precipitation conditions and synthesis of statistics at the local level
+
+The Partitioned Precipitation Conditions and Synthesis of Statistics at the Local Level
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. image:: kw_05_plot/part_ss_1p.tif
-   :alt: part_ss_1p
+   :alt: The partitioned precipitation conditions and synthesis of statistics at the local level
    :width: 600px
 
 
