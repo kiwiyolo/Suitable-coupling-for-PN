@@ -1,6 +1,26 @@
 ===============================
 Instructional document
 ===============================
+Abstract
+--------
+When attempting to enhance the incorporation of physical principles through coupling methods such as optical flow or others in deep learning, the resulting differences brought by these coupling strategies are often overlooked. Therefore, further verification is required to determine whether an end-to-end approach is indeed optimal for establishing such models. In this study, two classical model structures are employed to explore how different coupling strategies using the optical flow method affect prediction results along with corresponding attribution analysis. Some constructive comments and references will be presented for the next development of precipitation nowcasting models. Additionally, by considering geographical environmental variations across different regions in China, we evaluate the applicability of precipitation prediction models in each region. We propose adopting a strategy that constructs an end-to-end network combined with convolutional and recursive networks to achieve reliable precipitation nowcasting. 
+
+.. raw:: html
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="flex: 1; margin: 5px;">
+            <img src="kw_05_plot/An overview of the proposed NcN.tif" alt="An overview of the proposed NcN" style="width: 100%;">
+        </div>
+        <div style="flex: 1; margin: 5px;">
+            <img src="kw_05_plot/CNcN.tif" alt="CNcN" style="width: 100%;">
+        </div>
+        <div style="flex: 1; margin: 5px;">
+            <img src="kw_05_plot/RNcN.tif" alt="RNcN" style="width: 100%;">
+        </div>
+        <div style="flex: 1; margin: 5px;">
+            <img src="kw_05_plot/part_ss_1p.tif" alt="part_ss_1p" style="width: 100%;">
+        </div>
+    </div>
 
 
 config_BP.json			        BP neural network framework, dataset and parameters
