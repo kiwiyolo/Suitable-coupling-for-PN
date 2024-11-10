@@ -10,7 +10,7 @@ Figures
 
 A Graphical Abstract
 
-.. image:: kw_05_plot/Graphical abstract.png
+.. image:: kw_05_plot/Graphical_abstract.png
    :alt: A graphical abstract of the research
    :width: 600px
 
