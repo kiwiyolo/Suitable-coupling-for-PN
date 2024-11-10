@@ -8,6 +8,12 @@ When attempting to enhance the incorporation of physical principles through coup
 Figures
 -------
 
+A Graphical Abstract
+
+.. image:: kw_05_plot/Graphical abstract.png
+   :alt: A graphical abstract of the research
+   :width: 600px
+
 An Overview of the Proposed NcN
 
 .. image:: kw_05_plot/An_overview_NcN.png
